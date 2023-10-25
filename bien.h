@@ -14,6 +14,8 @@ public:
     Bien();
     double getValor() const;
     void setValor(double newValor);
+    int getCod() const;
+    void setCod(int newCod);
 };
 
 #endif // BIEN_H

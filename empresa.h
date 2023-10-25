@@ -18,6 +18,7 @@ public:
     void addBien(Bien* bien);
     void calcularAmortizacion();
     void leer(const std::string& filename);
+    void guardarValoresPostAmortizacion(const std::string& filename);
     Empresa();
     
 };

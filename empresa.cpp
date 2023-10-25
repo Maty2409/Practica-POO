@@ -54,6 +54,22 @@ void Empresa::leer(const string& filename)
         archi.close();
     }
 
+void Empresa::guardarValoresPostAmortizacion(const std::string& filename)
+    {
+        std::ofstream file(filename);
+        if (!file.is_open())
+        {
+            std::cout << "Error al abrir el archivo para escritura." << std::endl;
+            return;
+        }
+
+        for (const auto& bien : bienes)
+        {
+            file << "codigo " << bien->getCod() << " valor " << bien->getValor() << std::endl;
+        }
+
+        file.close();
+    }
 Empresa::Empresa()
 {
 

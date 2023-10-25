@@ -22,7 +22,7 @@ int main()
 
     Emp1.calcularAmortizacion();
     
-    
+    Emp1.guardarValoresPostAmortizacion("valores_post_amortizacion.txt");
 
     return 0;
 }
