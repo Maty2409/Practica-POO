@@ -2,7 +2,7 @@
 #define MUEBLE_H
 #include "bien.h"
 
-class Mueble : Bien
+class Mueble : public Bien
 {
 public:
     float calcularAmortizacion();

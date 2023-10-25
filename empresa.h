@@ -2,6 +2,7 @@
 #define EMPRESA_H
 #include "bien.h"
 #include <vector>
+#include <iostream>
 
 struct strbien{
     int cod;
@@ -12,9 +13,9 @@ struct strbien{
 class Empresa
 {
 private:
-    std::vector <Bien> bienes;
+    std::vector <Bien* > bienes;
 public:
-    //void leer();
+    void leer(const std::string& filename);
     Empresa();
 };
 
