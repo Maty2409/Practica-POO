@@ -70,6 +70,15 @@ void Empresa::guardarValoresPostAmortizacion(const std::string& filename)
 
         file.close();
     }
+
+double Empresa::mayorAmortizacion(){
+
+    sort(this->bienes.begin(), this->bienes.end(),
+         [](Bien* e, Bien* e2) -> bool {return (e->getValor() > e2->getValor()); });
+
+    return this->bienes[0]->getValor();
+}
+
 Empresa::Empresa()
 {
 

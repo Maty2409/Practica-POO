@@ -20,9 +20,14 @@ int main()
     Emp1.addBien(C1);
     Emp1.addBien(M1);
 
+    cout<<"\tAmortizacion de todos los bienes"<<endl;
     Emp1.calcularAmortizacion();
     
+    cout<<"\tAmortizacion de mayor valor"<<endl;
+
     Emp1.guardarValoresPostAmortizacion("valores_post_amortizacion.txt");
+    cout<<Emp1.mayorAmortizacion();
+
 
     return 0;
 }
