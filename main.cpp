@@ -17,6 +17,6 @@ int main()
     cout<<T1.calcularAmortizacion()<<endl;
     cout<<C1.calcularAmortizacion()<<endl;
     cout<<M1.calcularAmortizacion()<<endl;
-
+    cout<<"Hola miundo";
         return 0;
 }
