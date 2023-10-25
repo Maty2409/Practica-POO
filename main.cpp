@@ -26,8 +26,8 @@ int main()
     cout<<"\tAmortizacion de mayor valor"<<endl;
 
     Emp1.guardarValoresPostAmortizacion("valores_post_amortizacion.txt");
-    cout<<Emp1.mayorAmortizacion();
+    cout<<Emp1.mayorAmortizacion()<<endl;
 
-
+    cout<<"Fin del programa"<<endl;
     return 0;
 }
