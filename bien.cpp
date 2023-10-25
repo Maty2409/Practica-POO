@@ -24,6 +24,16 @@ void Bien::setCod(int newCod)
     cod = newCod;
 }
 
+char Bien::getTipo() const
+{
+    return tipo;
+}
+
+void Bien::setTipo(char newTipo)
+{
+    tipo = newTipo;
+}
+
 Bien::Bien(int _cod, char _tipo, double _valor)
 {
       this->cod=_cod;

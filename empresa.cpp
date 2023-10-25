@@ -6,6 +6,8 @@
 #include "terreno.h"
 #include "comun.h"
 #include <algorithm>
+#include <map>
+#include <numeric>
 
 using namespace std;
 
@@ -78,6 +80,28 @@ double Empresa::mayorAmortizacion(){
 
     return this->bienes[0]->getValor();
 }
+
+void Empresa::imprimirTotales(const std::map<char, double>& totals) {
+    std::cout << "Valores totales por tipo de bien:\n";
+
+    for (const auto& [tipo, valor] : totals) {
+        std::cout << "Tipo: " << tipo << " - Valor total: " << valor << std::endl;
+    }
+}
+
+map<char, double> Empresa::valorTotalPorTipo() {
+        std::map<char, double> totals;
+
+        for (char tipo : {'T', 'M', 'C'}) {
+            totals[tipo] = std::accumulate(this->bienes.begin(),this->bienes.end(), 0.0,
+                                           [tipo](double acc, Bien* b) {
+                                               return (b->getTipo() == tipo) ? acc + b->getValor() : acc;
+                                           });
+        }
+
+        return totals;
+    }
+
 
 Empresa::Empresa()
 {

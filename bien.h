@@ -16,6 +16,8 @@ public:
     void setValor(double newValor);
     int getCod() const;
     void setCod(int newCod);
+    char getTipo() const;
+    void setTipo(char newTipo);
 };
 
 #endif // BIEN_H

@@ -28,6 +28,10 @@ int main()
     Emp1.guardarValoresPostAmortizacion("valores_post_amortizacion.txt");
     cout<<Emp1.mayorAmortizacion()<<endl;
 
+    cout<<"\tAmortizacion discriminada por tipos"<<endl;
+
+    Emp1.imprimirTotales(Emp1.valorTotalPorTipo());
+
     cout<<"Fin del programa"<<endl;
     return 0;
 }

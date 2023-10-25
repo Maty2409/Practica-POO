@@ -3,6 +3,7 @@
 #include "bien.h"
 #include <vector>
 #include <iostream>
+#include <map>
 
 struct strbien{
     int cod;
@@ -20,6 +21,8 @@ public:
     void leer(const std::string& filename);
     void guardarValoresPostAmortizacion(const std::string& filename);
     double mayorAmortizacion();
+    std::map<char, double> valorTotalPorTipo();
+    void imprimirTotales(const std::map<char, double>& totals);
     Empresa();
     
 };
