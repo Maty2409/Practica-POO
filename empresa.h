@@ -15,6 +15,7 @@ class Empresa
 private:
     std::vector <Bien* > bienes;
 public:
+    void calcularAmortizacion();
     void leer(const std::string& filename);
     Empresa();
 };

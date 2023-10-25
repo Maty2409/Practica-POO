@@ -5,8 +5,18 @@
 #include "mueble.h"
 #include "terreno.h"
 #include "comun.h"
+#include <algorithm>
 
 using namespace std;
+
+void Empresa::calcularAmortizacion()
+{
+    for_each (bienes.begin(), bienes.end(), [&] (Bien* bien){
+           bien->calcularAmortizacion();
+
+    });
+}
+
 void Empresa::leer(const string& filename)
     {
         ifstream archi(filename, ios::binary);
