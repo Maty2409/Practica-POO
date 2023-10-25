@@ -21,6 +21,5 @@ int main()
 
     Empresa Emp1;
 
-
-        return 0;
+    return 0;
 }
