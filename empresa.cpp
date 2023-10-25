@@ -9,16 +9,16 @@
 
 using namespace std;
 
-void addBien(Bien* bien)
+void Empresa::addBien(Bien* bien)
     {
-        bienes.push_back(bien);
+        this->bienes.push_back(bien);
     }
 
 void Empresa::calcularAmortizacion()
 {
     for_each (bienes.begin(), bienes.end(), [&] (Bien* bien){
 
-           std::cout << bien->calcularAmortizacion() << std::endl
+           std::cout << bien->calcularAmortizacion() << std::endl;
         
     });
 }

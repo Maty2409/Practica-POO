@@ -15,7 +15,7 @@ class Empresa
 private:
     std::vector <Bien* > bienes;
 public:
-    void addBien(Bien* bien)
+    void addBien(Bien* bien);
     void calcularAmortizacion();
     void leer(const std::string& filename);
     Empresa();
